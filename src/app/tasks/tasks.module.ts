@@ -7,6 +7,7 @@ import { PageAddTaskComponent } from './pages/page-add-task/page-add-task.compon
 import { PageEditTaskComponent } from './pages/page-edit-task/page-edit-task.component';
 import { FormComponent } from './form/form.component';
 import { FormTaskComponent } from './components/form-task/form-task.component';
+import { ColumnTasksComponent } from './components/column-tasks/column-tasks.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { FormTaskComponent } from './components/form-task/form-task.component';
     PageAddTaskComponent,
     PageEditTaskComponent,
     FormComponent,
-    FormTaskComponent
+    FormTaskComponent,
+    ColumnTasksComponent
   ],
   imports: [
     CommonModule,
