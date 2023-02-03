@@ -11,11 +11,11 @@ import { TasksService } from '../../services/tasks.service';
 export class PageListTasksComponent implements OnInit {
   // public columns: string[] = ['A FAIRE', 'EN COURS', 'TERMINE', 'BLOQUE'];
   public collection!: Task[];
-  
+
   public columns = Object.values(StateTask);
   constructor(private tasksService: TasksService) {
     this.tasksService.collection.subscribe((data) => {
-      console.log(data);
+      console.log('collection', data);
       this.collection = data;
     });
   }

@@ -1,5 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
+import { StateTask } from 'src/app/core/enums/state-task';
 import { Task } from 'src/app/core/models/task';
+import { TasksService } from '../../services/tasks.service';
 
 @Component({
   selector: 'app-column-tasks',
@@ -10,16 +12,31 @@ export class ColumnTasksComponent implements OnInit {
   @Input() collection!: Task[];
   @Input() title!: string;
   public filted!: Task[];
+  public states = Object.values(StateTask);
 
-  constructor() {
+  constructor(private tasksService: TasksService) {
     // console.log(this.collection);
   }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  ngOnChanges(changes: SimpleChanges) {
     console.log(this.title);
     this.filted = this.collection.filter(
       (collection) => collection.state === this.title
     );
     console.log(this.filted);
+  }
+
+  public changeState(item: Task, event: Event) {
+    // console.log(item);
+    const target = event.target as HTMLSelectElement;
+    // console.log(target);
+    const state = target.value as StateTask;
+    // console.log(state);
+    this.tasksService.changeState(item, state).subscribe((data) => {
+      console.log(data);
+      Object.assign(item, data);
+    });
   }
 }

@@ -1,4 +1,4 @@
-<span *ngIf="collection">
+<span *ngIf="collection.length > 0">
   <app-column-tasks
     [collection]="collection"
     *ngFor="let column of columns"
