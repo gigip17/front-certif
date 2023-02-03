@@ -1,7 +1,8 @@
 {
-  "task": [
-    { "id": 1, "title": "Crée Html", "state": "In Progress" },
-    { "id": 2, "title": "Crée css", "state": "Bloqued" },
-    { "id": 3, "title": "Faire Javascript", "state": "In Progress" }
+  "tasks": [
+    { "id": 1, "task": "Crée Html", "state": "A FAIRE" },
+    { "id": 2, "task": "Crée css", "state": "EN COURS" },
+    { "id": 3, "task": "Faire Javascript", "state": "TERMINE" },
+    { "id": 4, "task": "Faire Javascript", "state": "BLOQUE" }
   ]
 }
