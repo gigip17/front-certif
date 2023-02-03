@@ -1,8 +1,44 @@
 {
   "tasks": [
-    { "id": 1, "task": "Crée Html", "state": "A FAIRE" },
-    { "id": 2, "task": "Crée css", "state": "EN COURS" },
-    { "id": 3, "task": "Faire Javascript", "state": "TERMINE" },
-    { "id": 4, "task": "Faire Javascript", "state": "BLOQUE" }
+    {
+      "id": 1,
+      "task": "Crée Html",
+      "state": "A FAIRE"
+    },
+    {
+      "id": 2,
+      "task": "Crée css",
+      "state": "EN COURS"
+    },
+    {
+      "id": 3,
+      "task": "Faire Javascript",
+      "state": "TERMINE"
+    },
+    {
+      "id": 4,
+      "task": "Faire Javascript",
+      "state": "BLOQUE"
+    },
+    {
+      "id": 5,
+      "task": "Crée Html",
+      "state": "A FAIRE"
+    },
+    {
+      "id": 6,
+      "task": "Crée css",
+      "state": "EN COURS"
+    },
+    {
+      "id": 7,
+      "task": "Faire Javascript",
+      "state": "TERMINE"
+    },
+    {
+      "id": 8,
+      "task": "Faire Javascript",
+      "state": "BLOQUE"
+    }
   ]
 }

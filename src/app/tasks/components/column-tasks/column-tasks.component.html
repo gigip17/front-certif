@@ -1,4 +1,8 @@
-<div>
-  <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-  <p></p>
+<h1>{{ title }}</h1>
+<div *ngIf="filted">
+  <div *ngFor="let item of filted">
+    <p>{{ item.state }}</p>
+    <p>{{ item.task }}</p>
+    <p>{{ item.id }}</p>
+  </div>
 </div>

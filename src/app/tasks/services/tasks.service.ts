@@ -1,12 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Task } from 'src/app/core/models/task';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class TasksService {
-
   private collection$!: Observable<Task[]>;
 
   constructor(private http: HttpClient) {
@@ -19,7 +19,7 @@ export class TasksService {
   }
 
   //getter
-  public get collection() : Observable<Task[]> {
+  public get collection(): Observable<Task[]> {
     return this.collection$;
   }
 }

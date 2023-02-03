@@ -1,3 +1,8 @@
-<app-column-tasks>
-  
-</app-column-tasks>
+<span *ngIf="collection">
+  <app-column-tasks
+    [collection]="collection"
+    *ngFor="let column of columns"
+    [title]="column"
+  >
+  </app-column-tasks>
+</span>
