@@ -15,7 +15,7 @@ export class PageListTasksComponent implements OnInit {
   public columns = Object.values(StateTask);
   constructor(private tasksService: TasksService) {
     this.tasksService.collection.subscribe((data) => {
-      console.log('collection', data);
+      // console.log('collection', data);
       this.collection = data;
     });
   }

@@ -1,0 +1,21 @@
+.div-head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-add {
+  text-align: center;
+  height: 50px;
+  width: 130px;
+  font-size: 1.5em;
+  margin: 15px;
+  margin-right: 50px;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 10px;
+  background-color: #46b0ea;
+}
+.logo > img {
+  height: 57px;
+  margin: 20px 50px;
+}

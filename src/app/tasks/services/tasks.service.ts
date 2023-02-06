@@ -36,8 +36,8 @@ export class TasksService {
   }
 
   public changeState(item: Task, state: StateTask): Observable<Task> {
-    console.log(item);
-    console.log(state);
+    // console.log(item);
+    // console.log(state);
     const obj = new Task(item);
 
     obj.state = state;

@@ -24,11 +24,11 @@ export class ColumnTasksComponent implements OnInit {
     this.router.navigate(['edit-task', obj.id]);
   }
   ngOnChanges(changes: SimpleChanges) {
-    console.log(this.title);
+    // console.log(this.title);
     this.filted = this.collection.filter(
       (collection) => collection.state === this.title
     );
-    console.log(this.filted);
+    // console.log(this.filted);
   }
 
   public changeState(item: Task, event: Event) {
@@ -38,7 +38,7 @@ export class ColumnTasksComponent implements OnInit {
     const state = target.value as StateTask;
     // console.log(state);
     this.tasksService.changeState(item, state).subscribe((data) => {
-      console.log(data);
+      // console.log(data);
       Object.assign(item, data);
     });
   }

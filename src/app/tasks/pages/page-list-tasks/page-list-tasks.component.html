@@ -1,6 +1,6 @@
-<app-btn route="/add-task" label="Nouvelle Tâche"></app-btn>
-<span *ngIf="collection.length > 0">
+<span class="container" *ngIf="collection.length > 0">
   <app-column-tasks
+    class="column-container"
     [collection]="collection"
     *ngFor="let column of columns"
     [title]="column"
