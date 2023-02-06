@@ -1,1 +1,5 @@
-<p>page-edit-task works!</p>
+<app-form-task
+  *ngIf="item"
+  [init]="item"
+  (submitted)="onEdit($event)"
+></app-form-task>

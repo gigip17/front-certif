@@ -8,7 +8,8 @@ import { PageEditTaskComponent } from './pages/page-edit-task/page-edit-task.com
 
 import { FormTaskComponent } from './components/form-task/form-task.component';
 import { ColumnTasksComponent } from './components/column-tasks/column-tasks.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { ColumnTasksComponent } from './components/column-tasks/column-tasks.com
   ],
   imports: [
     CommonModule,
-    TasksRoutingModule
-  ]
+    TasksRoutingModule,
+    ReactiveFormsModule,
+    SharedModule,
+  ],
 })
-export class TasksModule { }
+export class TasksModule {}

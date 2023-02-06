@@ -1,12 +1,15 @@
 <h1>{{ title }}</h1>
+<span *ngIf="filted.length === 0">
+  <p>vide</p>
+</span>
 <div *ngIf="filted">
   <div *ngFor="let item of filted">
-    <p>{{ item.state }}</p>
     <p>{{ item.task }}</p>
     <select (change)="changeState(item, $event)">
       <option *ngFor="let state of states" [selected]="state === item.state">
         {{ state }}
       </option>
     </select>
+    <button (click)="goToEdit(item)">Modifier</button>
   </div>
 </div>

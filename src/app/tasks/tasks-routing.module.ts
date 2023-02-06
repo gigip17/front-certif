@@ -5,13 +5,13 @@ import { PageEditTaskComponent } from './pages/page-edit-task/page-edit-task.com
 import { PageListTasksComponent } from './pages/page-list-tasks/page-list-tasks.component';
 
 const routes: Routes = [
-  { path: '', component: PageListTasksComponent},
-  { path: 'add-task', component: PageAddTaskComponent},
-  { path: 'edit-task', component: PageEditTaskComponent},
+  { path: '', component: PageListTasksComponent },
+  { path: 'add-task', component: PageAddTaskComponent },
+  { path: 'edit-task/:id', component: PageEditTaskComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class TasksRoutingModule { }
+export class TasksRoutingModule {}

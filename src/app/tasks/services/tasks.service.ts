@@ -54,4 +54,10 @@ export class TasksService {
         })
       );
   }
+  public getItemById(id: number): Observable<Task> {
+    return this.http.get<Task>(`http://localhost:3000/tasks/${id}`);
+  }
+  public add(obj: Task): Observable<Task> {
+    return this.http.post<Task>('http://localhost:3000/tasks', obj);
+  }
 }

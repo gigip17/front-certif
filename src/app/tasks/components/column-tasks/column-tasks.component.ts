@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
+import { Router } from '@angular/router';
 import { StateTask } from 'src/app/core/enums/state-task';
 import { Task } from 'src/app/core/models/task';
 import { TasksService } from '../../services/tasks.service';
@@ -14,12 +15,14 @@ export class ColumnTasksComponent implements OnInit {
   public filted!: Task[];
   public states = Object.values(StateTask);
 
-  constructor(private tasksService: TasksService) {
+  constructor(private tasksService: TasksService, private router: Router) {
     // console.log(this.collection);
   }
 
   ngOnInit(): void {}
-
+  goToEdit(obj: Task) {
+    this.router.navigate(['edit-task', obj.id]);
+  }
   ngOnChanges(changes: SimpleChanges) {
     console.log(this.title);
     this.filted = this.collection.filter(

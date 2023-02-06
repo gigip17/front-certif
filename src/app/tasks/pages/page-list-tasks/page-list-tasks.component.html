@@ -1,3 +1,4 @@
+<app-btn route="/add-task" label="Nouvelle Tâche"></app-btn>
 <span *ngIf="collection.length > 0">
   <app-column-tasks
     [collection]="collection"
@@ -5,4 +6,8 @@
     [title]="column"
   >
   </app-column-tasks>
+</span>
+
+<span *ngIf="collection.length === 0">
+  <p>vide</p>
 </span>
