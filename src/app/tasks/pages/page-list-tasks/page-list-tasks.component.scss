@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-around;
   border: solid 1px black;
-  min-height: 500px;
+  min-height: 750px;
 }
 
 .column-container {
@@ -11,5 +11,15 @@
   padding: 15px 0px;
   border-radius: 15px;
   background-color: #e3e7e9;
+  text-align: center;
+}
+
+.main-vide {
+  min-height: 700px;
+  padding: 50px;
+}
+
+.main-vide > p {
+  font-size: 2em;
   text-align: center;
 }

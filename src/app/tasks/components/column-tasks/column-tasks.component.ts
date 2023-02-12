@@ -14,6 +14,7 @@ export class ColumnTasksComponent implements OnInit {
   @Input() title!: string;
   public filted!: Task[];
   public states = Object.values(StateTask);
+  public test: string = 'A FAIRE';
 
   constructor(private tasksService: TasksService, private router: Router) {
     // console.log(this.collection);

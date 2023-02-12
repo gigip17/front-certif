@@ -1,49 +1,14 @@
 {
   "tasks": [
     {
-      "state": "BLOQUE",
       "task": "test",
+      "state": "A FAIRE",
       "id": 1
     },
     {
-      "state": "EN COURS",
+      "state": "BLOQUE",
       "task": "test",
       "id": 2
-    },
-    {
-      "task": "test3",
-      "state": "A FAIRE",
-      "id": 3
-    },
-    {
-      "task": "test4",
-      "state": "A FAIRE",
-      "id": 4
-    },
-    {
-      "task": "test 5",
-      "state": "A FAIRE",
-      "id": 5
-    },
-    {
-      "task": "test6",
-      "state": "A FAIRE",
-      "id": 6
-    },
-    {
-      "task": "ok ok",
-      "state": "A FAIRE",
-      "id": 7
-    },
-    {
-      "task": "test",
-      "state": "A FAIRE",
-      "id": 8
-    },
-    {
-      "task": "testttttt",
-      "state": "BLOQUE",
-      "id": 9
     }
   ]
 }

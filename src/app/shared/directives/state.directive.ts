@@ -13,10 +13,8 @@ export class StateDirective {
 
   ngOnChanges() {
     this.etat = this.etat.replace(/\s/g, '-');
-    console.log(this.etat);
+    // console.log(this.etat);
     this.divClassName = `state-${this.etat.toLowerCase()}`;
     console.log(this.divClassName);
-
-    // console.log('depuis directive appstate');
   }
 }
