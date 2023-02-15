@@ -9,6 +9,11 @@
         formControlName="task"
       />
     </div>
+
+    <div *ngIf="taskForm.controls['task'].errors?.['maxlength']">
+      <p class="validator-error">Ce champs contient trop de caractères</p>
+    </div>
+
     <div class="div-select">
       <label for="states">Statut : </label>
       <select formControlName="state" id="states">

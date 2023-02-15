@@ -1,7 +1,6 @@
 .container {
   display: flex;
   justify-content: space-around;
-  border: solid 1px black;
   min-height: 750px;
 }
 
@@ -22,4 +21,22 @@
 .main-vide > p {
   font-size: 2em;
   text-align: center;
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    min-height: 500px;
+  }
+
+  .column-container {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .column-container {
+    width: 90%;
+  }
 }

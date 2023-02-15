@@ -1,3 +1,7 @@
+.btn-add-min {
+  display: none;
+}
+
 .div-head {
   display: flex;
   justify-content: space-between;
@@ -20,4 +24,34 @@
 .logo > img {
   height: 57px;
   margin: 20px 50px;
+}
+
+@media only screen and (max-width: 600px) {
+  .logo > img {
+    margin: 28px 20px;
+    height: 40px;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .btn-add {
+    display: none;
+  }
+
+  .btn-add-min {
+    display: block;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    color: aliceblue;
+    text-align: center;
+    height: 50px;
+    font-size: 3em;
+    margin: 15px;
+    margin-right: 20px;
+    padding: 10px 20px 20px 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: #46b0ea;
+  }
 }

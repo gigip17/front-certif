@@ -4,8 +4,23 @@ header {
 
 main {
   background-color: #b0d4e8;
+  min-height: 1000px;
 }
 footer {
   background-color: #004266;
   min-height: 100px;
+}
+
+@media only screen and (max-width: 1200px) {
+  header {
+    position: sticky;
+    top: 0;
+    right: 0;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  header {
+    position: static;
+  }
 }
