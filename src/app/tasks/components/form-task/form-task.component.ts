@@ -10,6 +10,7 @@ import { Task } from 'src/app/core/models/task';
 })
 export class FormTaskComponent implements OnInit {
   public taskForm!: FormGroup;
+  @Input() public title!: string;
 
   public states = Object.values(StateTask);
   @Input() init!: Task;
