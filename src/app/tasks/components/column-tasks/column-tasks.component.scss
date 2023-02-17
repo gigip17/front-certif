@@ -5,7 +5,7 @@
   background-color: #60d394;
 }
 .state-bloque {
-  background-color: #ff928b;
+  background-color: #f0d0d2;
 }
 .state-a-faire {
   background-color: #cdb4db;
@@ -30,13 +30,20 @@ h1 {
   display: flex;
   justify-content: space-evenly;
 }
+
 .btn-container > span {
-  background-color: #004466;
   color: aliceblue;
   padding: 5px;
   border: 1px solid black;
   width: 83px;
   cursor: pointer;
+}
+.btn-container > .btn-modifier {
+  background-color: #004466;
+}
+
+.btn-container > .btn-delete {
+  background-color: #ff928b;
 }
 
 .btn-add {

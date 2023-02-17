@@ -43,4 +43,11 @@ export class ColumnTasksComponent implements OnInit {
       Object.assign(item, data);
     });
   }
+
+  public deleteItem(id: Number) {
+    this.tasksService.delete(id).subscribe((data) => {
+      console.log(data);
+      this.router.navigate(['/']);
+    });
+  }
 }

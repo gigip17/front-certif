@@ -14,7 +14,6 @@ export class TasksService {
   );
 
   constructor(private http: HttpClient) {
-    // this.collection = this.http.get<Task[]>('http://localhost:3000/tasks');
     this.refreshCollection();
   }
 
@@ -24,11 +23,6 @@ export class TasksService {
     });
   }
 
-  //setter
-  // public set collection(col: Observable<Task[]>) {
-  //   this.collection$ = col;
-  // }
-
   //getter
   public get collection(): Observable<Task[]> {
     this.refreshCollection();
@@ -36,8 +30,6 @@ export class TasksService {
   }
 
   public changeState(item: Task, state: StateTask): Observable<Task> {
-    // console.log(item);
-    // console.log(state);
     const obj = new Task(item);
 
     obj.state = state;
@@ -59,5 +51,13 @@ export class TasksService {
   }
   public add(obj: Task): Observable<Task> {
     return this.http.post<Task>('http://localhost:3000/tasks', obj);
+  }
+
+  public delete(id: Number): Observable<Task> {
+    return this.http.delete<Task>(`http://localhost:3000/tasks/${id}`).pipe(
+      tap(() => {
+        this.refreshCollection();
+      })
+    );
   }
 }
