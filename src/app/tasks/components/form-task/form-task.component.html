@@ -25,9 +25,6 @@
     </div>
 
     <div class="div-btn">
-      <button *ngIf="init.id" class="btn-delete" (click)="deleteItem(init.id)">
-        Supprimer
-      </button>
       <button
         class="btn-valid"
         [disabled]="this.taskForm.invalid"

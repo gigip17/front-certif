@@ -29,7 +29,7 @@ export class ColumnTasksComponent implements OnInit {
     this.filted = this.collection.filter(
       (collection) => collection.state === this.title
     );
-    // console.log(this.filted);
+    console.log(this.filted.length);
   }
 
   public changeState(item: Task, event: Event) {
@@ -44,10 +44,10 @@ export class ColumnTasksComponent implements OnInit {
     });
   }
 
-  // public deleteItem(id: Number) {
-  //   this.tasksService.delete(id).subscribe((data) => {
-  //     console.log(data);
-  //     this.router.navigate(['/']);
-  //   });
-  // }
+  public deleteItem(id: Number) {
+    this.tasksService.delete(id).subscribe((data) => {
+      console.log(data);
+      this.router.navigate(['/']);
+    });
+  }
 }

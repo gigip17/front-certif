@@ -36,11 +36,4 @@ export class FormTaskComponent implements OnInit {
   public onSubmit() {
     this.submitted.emit(this.taskForm.value); // .next
   }
-
-  public deleteItem(id: Number) {
-    this.tasksService.delete(id).subscribe((data) => {
-      console.log(data);
-      this.router.navigate(['/']);
-    });
-  }
 }
