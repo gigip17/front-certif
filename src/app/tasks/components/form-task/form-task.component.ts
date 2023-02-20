@@ -1,7 +1,9 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { StateTask } from 'src/app/core/enums/state-task';
 import { Task } from 'src/app/core/models/task';
+import { TasksService } from '../../services/tasks.service';
 
 @Component({
   selector: 'app-form-task',
@@ -16,7 +18,11 @@ export class FormTaskComponent implements OnInit {
   @Input() init!: Task;
   @Output() submitted = new EventEmitter();
 
-  constructor(private fb: FormBuilder) {
+  constructor(
+    private fb: FormBuilder,
+    private tasksService: TasksService,
+    private router: Router
+  ) {
     console.log('form', this.states);
   }
 
@@ -29,5 +35,12 @@ export class FormTaskComponent implements OnInit {
   }
   public onSubmit() {
     this.submitted.emit(this.taskForm.value); // .next
+  }
+
+  public deleteItem(id: Number) {
+    this.tasksService.delete(id).subscribe((data) => {
+      console.log(data);
+      this.router.navigate(['/']);
+    });
   }
 }

@@ -44,10 +44,10 @@ export class ColumnTasksComponent implements OnInit {
     });
   }
 
-  public deleteItem(id: Number) {
-    this.tasksService.delete(id).subscribe((data) => {
-      console.log(data);
-      this.router.navigate(['/']);
-    });
-  }
+  // public deleteItem(id: Number) {
+  //   this.tasksService.delete(id).subscribe((data) => {
+  //     console.log(data);
+  //     this.router.navigate(['/']);
+  //   });
+  // }
 }

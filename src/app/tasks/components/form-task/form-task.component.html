@@ -23,8 +23,18 @@
         </option>
       </select>
     </div>
+
     <div class="div-btn">
-      <button [disabled]="this.taskForm.invalid" type="submit">Validez</button>
+      <button *ngIf="init.id" class="btn-delete" (click)="deleteItem(init.id)">
+        Supprimer
+      </button>
+      <button
+        class="btn-valid"
+        [disabled]="this.taskForm.invalid"
+        type="submit"
+      >
+        Validez
+      </button>
     </div>
   </div>
 </form>
